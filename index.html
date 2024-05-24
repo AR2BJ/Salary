@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Salary</title>
+		<!-- Link to the main stylesheet -->
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salary</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-
-<body class="bg-pink-50">
-    <div class="wrapper">
-        <div
-            class="form p-8 w-1/2 mx-auto mt-12 rounded-xl text-white bg-cyan-700 flex flex-col justify-center items-center">
-            <form class="w-full flex flex-col justify-center" action="" method="get">
-                <p class="mb-4 font-[IranYekanBold] text-2xl self-center">فرم محاسبه حقوق</p>
-                <label class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer" for="fname">نام و نام
-                    خانوادگی</label>
-                <input
-                    class="fullName w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
-                    type="text" id="fname" required placeholder="نام و نام خانوادگی خود را وارد کنید">
-                <label class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer" for="hw">ساعت کاری</label>
-                <input
-                    class="hw w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
-                    type="text" id="hw" required placeholder="ساعت کاری خود در یک ماه را وارد کنید">
-                <label class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer" for="tax">نرخ مالیات</label>
-                <input
-                    class="tax w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
-                    type="text" id="tax" required placeholder="درصد مالیات پرداختی را وارد کنید">
-                <label class="pt-3 mb-3 px-3 pb-1.5 font-[IranYekanBold] text-lg cursor-pointer" for="Grade">مدرک
-                    تحصیلی</label>
-                <div class="footer flex flex-row justify-center items-center">
-                    <select
-                        class="grade w-1/4 h-12 leading-9 px-2 text-lg border-2 border-solid bg-slate-100 border-orange-600 text-black rounded-md cursor-pointer"
-                        name="Grade" id="Grade">
-                        <option value="empty" selected>------</option>
-                        <option value="diploma">دیپلم</option>
-                        <option value="bachelor">لیسانس</option>
-                        <option value="master">فوق لیسانس</option>
-                        <option value="phd">دکتری</option>
-                    </select>
-                    <input
-                        class="submit w-3/4 p-2.5 mr-3 bg-orange-600 font-[IranYekanBold] text-xl text-white rounded-md cursor-pointer transition-all hover:bg-orange-700"
-                        type="button" value="محاسبه">
-                </div>
-            </form>
-        </div>
-        <div
-            class="salary_box mt-10 w-1/2 mx-auto p-14 opacity-0 bg-cyan-700 text-lg text-white rounded-xl flex flex-row justify-evenly items-center transition-all">
-            <p class="salary_message text-[16px] font-[IranYekanBold] opacity-0 transition-all"></p>
-            <p class="salary mr-20 text-white text-2xl font-[IranYekanBold] opacity-0 transition-all"></p>
-        </div>
-    </div>
-    <script src="./js/main.js"></script>
-</body>
-
+	<body class="bg-pink-50">
+		<div class="wrapper">
+			<!-- Form container with styling -->
+			<div
+				class="form p-8 w-1/2 mx-auto mt-12 rounded-xl text-white bg-cyan-700 flex flex-col justify-center items-center">
+				<!-- Salary calculation form -->
+				<form
+					class="w-full flex flex-col justify-center"
+					action=""
+					method="get">
+					<p class="mb-4 font-[IranYekanBold] text-2xl self-center">
+						فرم محاسبه حقوق
+					</p>
+					<!-- Label and input for full name -->
+					<label
+						class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer"
+						for="fname"
+						>نام و نام خانوادگی</label
+					>
+					<input
+						class="fullName w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
+						type="text"
+						id="fname"
+						required
+						placeholder="نام و نام خانوادگی خود را وارد کنید" />
+					<!-- Label and input for working hours -->
+					<label
+						class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer"
+						for="hw"
+						>ساعت کاری</label
+					>
+					<input
+						class="hw w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
+						type="text"
+						id="hw"
+						required
+						placeholder="ساعت کاری خود در یک ماه را وارد کنید" />
+					<!-- Label and input for tax rate -->
+					<label
+						class="p-3 mb-3 font-[IranYekanBold] text-lg cursor-pointer"
+						for="tax"
+						>نرخ مالیات</label
+					>
+					<input
+						class="tax w-full mb-5 p-3 pr-3 text-black border-2 border-solid bg-slate-100 border-orange-600 rounded-md"
+						type="text"
+						id="tax"
+						required
+						placeholder="درصد مالیات پرداختی را وارد کنید" />
+					<!-- Label and select for educational degree -->
+					<label
+						class="pt-3 mb-3 px-3 pb-1.5 font-[IranYekanBold] text-lg cursor-pointer"
+						for="Grade"
+						>مدرک تحصیلی</label
+					>
+					<div class="footer flex flex-row justify-center items-center">
+						<select
+							class="grade w-1/4 h-12 leading-9 px-2 text-lg border-2 border-solid bg-slate-100 border-orange-600 text-black rounded-md cursor-pointer"
+							name="Grade"
+							id="Grade">
+							<option value="empty" selected>------</option>
+							<option value="diploma">دیپلم</option>
+							<option value="bachelor">لیسانس</option>
+							<option value="master">فوق لیسانس</option>
+							<option value="phd">دکتری</option>
+						</select>
+						<!-- Submit button for the form -->
+						<input
+							class="submit w-3/4 p-2.5 mr-3 bg-orange-600 font-[IranYekanBold] text-xl text-white rounded-md cursor-pointer transition-all hover:bg-orange-700"
+							type="button"
+							value="محاسبه" />
+					</div>
+				</form>
+			</div>
+			<!-- Container for displaying the salary result -->
+			<div
+				class="salary_box mt-10 w-1/2 mx-auto p-14 opacity-0 bg-cyan-700 text-lg text-white rounded-xl flex flex-row justify-evenly items-center transition-all">
+				<p
+					class="salary_message text-[16px] font-[IranYekanBold] opacity-0 transition-all"></p>
+				<p
+					class="salary mr-20 text-white text-2xl font-[IranYekanBold] opacity-0 transition-all"></p>
+			</div>
+		</div>
+		<!-- Link to the main JavaScript file -->
+		<script src="./js/main.js"></script>
+	</body>
 </html>
